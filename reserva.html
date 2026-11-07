@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva - Hotel El Refugio</title>
+</head>
+<body>
+
+    <h1>Haga su reserva</h1>
+    
+    <!-- Formulario con action y method indicados[cite: 4] -->
+    <form action="procesareserva.php" method="GET">
+        
+        <!-- Agrupación de datos personales[cite: 4] -->
+        <fieldset>
+            <legend>Datos Personales</legend>
+            
+            <label for="nombre">Nombre:</label>
+            <!-- input requerido con longitud máxima y autofocus[cite: 4] -->
+            <input type="text" id="nombre" name="nombre" required maxlength="100" autofocus><br><br>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required maxlength="100"><br><br>
+            
+            <label for="dni">DNI:</label>
+            <!-- input con placeholder[cite: 4] -->
+            <input type="text" id="dni" name="dni" required maxlength="10" placeholder="DNI con letra"><br><br>
+        </fieldset>
+        
+        <!-- Agrupación de datos de estancia[cite: 4] -->
+        <fieldset>
+            <legend>Datos de su estancia</legend>
+            
+            <label>Tipo de habitación:</label><br>
+            <!-- Botones radio con el mismo name[cite: 4] -->
+            <input type="radio" id="hab_ind" name="habitación" value="Individual">
+            <label for="hab_ind">Individual</label><br>
+            
+            <input type="radio" id="hab_dob" name="habitación" value="Doble">
+            <label for="hab_dob">Doble</label><br>
+            
+            <input type="radio" id="hab_tri" name="habitación" value="Triple">
+            <label for="hab_tri">Triple</label><br><br>
+            
+            <label for="num_personas">Número de personas:</label>
+            <select id="num_personas" name="num_personas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br><br>
+            
+            <input type="checkbox" id="mascotas" name="mascotas" value="Lleva mascotas"> 
+            <label for="mascotas">Llevo mascotas</label><br><br>
+            
+            <label for="fecha_llegada">Fecha de llegada:</label>
+            <input type="date" id="fecha_llegada" name="fecha_llegada"><br><br>
+            
+            <!-- Type "time" es el estándar en HTML5 para horas (equivalente a "date" para fechas) -->
+            <label for="hora_llegada">Hora de llegada:</label>
+            <input type="time" id="hora_llegada" name="hora_llegada"><br><br>
+        </fieldset>
+        
+        <br>
+        <!-- Botones de envío y reseteo[cite: 4] -->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar">
+        
+    </form>
+    
+    <br><br>
+    <a href="index.html">Volver</a>
+
+</body>
+</html>
